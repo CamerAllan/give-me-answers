@@ -1,0 +1,48 @@
+{
+  "name": "give-me-answers",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension lets you jump straight to the most popular answer on a number of technical forums.",
+  "homepage_url": "https://ccallan.dev",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "page_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Scroll to best answer",
+    "default_popup": "/page_action/page_action.html"
+  },
+  "permissions": [
+    "https://github.com/*/*/issues",
+    "https://stackoverflow.com/questions/*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*/*/issues",
+        "https://stackoverflow.com/questions/*/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://github.com/*/*/issues",
+        "https://stackoverflow.com/questions/*/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}

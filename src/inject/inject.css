@@ -1,0 +1,8 @@
+/**
+ * Place your custom CSS styles here.
+ **/
+* {
+  /* Hopefully this is enough to account for any reasonably sized fixed headers */
+  /* If the wildcard becomes troublesome, not too hard to specify only the elements we want  */
+  scroll-margin-top: 5rem;
+}
