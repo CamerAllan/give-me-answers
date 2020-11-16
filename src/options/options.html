@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    </link>
+    <link rel="stylesheet" type="text/css" href="options.css">
+    </link>
+</head>
+
+<body>
+    <div id="options-outer">
+        <div id="options-inner">
+            <div id="options-page-title" class="page-title">give-me-answers</div>
+            <div id="options-page-subtitle" class="page-subtitle">version: 0.0.1</div>
+            <div id="options-area">
+                <div class="control-group">
+                    <label class="control-label">Auto-scroll will be enabled on the following sites:</label>
+                    <div class="controls">
+                        <input type="checkbox" id="stackoverflow-auto-scroll" name="stackoverflow-auto-scroll"
+                            value="StackOverflow">
+                        <label for="stackoverflow">StackOverflow</label><br>
+                        <input type="checkbox" id="github-auto-scroll" name="github-auto-scroll" value="GitHub">
+                        <label for="github">GitHub</label><br>
+                    </div>
+                </div>
+            </div>
+            <button id="save-options-button" class="btn btn-success">Save Options</button>
+            <div id="status"></div>
+        </div>
+    </div>
+
+    <!-- load javascript: unique html page javascript file -->
+    <script type="text/javascript" src="options.js"></script>
+</body>
+
+</html>

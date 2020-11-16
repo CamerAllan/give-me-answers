@@ -12,16 +12,17 @@
   "default_locale": "en",
   "background": {
     "scripts": [
-      "/bg/background.js"
+      "src/background/background.js"
     ],
     "persistent": true
   },
-  "page_action": {
+  "browser_action": {
     "default_icon": "icons/icon19.png",
-    "default_title": "Scroll to best answer",
-    "default_popup": "/page_action/page_action.html"
+    "default_title": "Scroll to best answer"
   },
+  "options_page": "src/options/options.html",
   "permissions": [
+    "storage",
     "https://github.com/*/*/issues",
     "https://stackoverflow.com/questions/*/*"
   ],
@@ -32,7 +33,7 @@
         "https://stackoverflow.com/questions/*/*"
       ],
       "css": [
-        "src/inject/inject.css"
+        "src/content/content.css"
       ]
     },
     {
@@ -41,7 +42,7 @@
         "https://stackoverflow.com/questions/*/*"
       ],
       "js": [
-        "src/inject/inject.js"
+        "src/content/content.js"
       ]
     }
   ]
