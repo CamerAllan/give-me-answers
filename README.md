@@ -23,9 +23,7 @@
 
 I made give-me-answers initially because of an issue I have with StackOverflow. StackOverflow [pins the accepted answer](https://meta.stackoverflow.com/questions/326095/please-unpin-the-accepted-answer-from-the-top) (chosen by the user that posted the question) to the top. This answer is often not the most highly rated, and frequently will provide outdated information.
 
-I usually want to see the answer first, as in most cases I understand the question before reaching the page.
-
-For that reason, I wanted an extension that would automatically scroll down to the answer with the most votes. Here it is!
+I usually want to see the answer first, as in most cases I understand the question before reaching the page. I wanted an extension that would automatically scroll down to the answer with the most votes, so I made one.
 
 The aim is to keep adding sites over time, where I find myself consistently trawling through the page looking for something I maybe saw a snippet of in my search results.
 
