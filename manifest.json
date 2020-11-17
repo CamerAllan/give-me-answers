@@ -17,19 +17,18 @@
     "persistent": true
   },
   "browser_action": {
-    "default_icon": "icons/icon19.png",
     "default_title": "Scroll to best answer"
   },
   "options_page": "src/options/options.html",
   "permissions": [
     "storage",
-    "https://github.com/*/*/issues",
+    "https://github.com/*/*/issues/*",
     "https://stackoverflow.com/questions/*/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://github.com/*/*/issues",
+        "https://github.com/*/*/issues/*",
         "https://stackoverflow.com/questions/*/*"
       ],
       "css": [
@@ -38,7 +37,7 @@
     },
     {
       "matches": [
-        "https://github.com/*/*/issues",
+        "https://github.com/*/*/issues/*",
         "https://stackoverflow.com/questions/*/*"
       ],
       "js": [
