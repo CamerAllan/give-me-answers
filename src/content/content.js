@@ -75,25 +75,22 @@ const getAnswer = (site) => {
 
 const scrollToAnswer = (site) => {
 	const result = getAnswer(site);
-	if (result.score > 0) {
-		result.answer.scrollIntoView({ behavior: "smooth", block: "start" });
-	}
+	result.answer.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 chrome.runtime.onMessage.addListener(function (msg) {
 	if (msg.text === "url_update") {
-		console.log('eyhasg')
 		var readyStateCheckInterval = setInterval(function () {
 			if (document.readyState === "complete") {
 				clearInterval(readyStateCheckInterval);
 				chrome.storage.sync.get(['autoScroll'], function (items) {
-
 					const site = getSite(window.location);
 					const autoScroll = items.autoScroll;
-					const autoScrollEnabled = autoScroll[site];
-
-					if (autoScrollEnabled) {
-						scrollToAnswer(site);
+					if (autoScroll) {
+						const autoScrollEnabled = autoScroll[site];
+						if (autoScrollEnabled) {
+							scrollToAnswer(site);
+						}
 					}
 				});
 			}
